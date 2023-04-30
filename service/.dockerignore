@@ -1,0 +1,12 @@
+*.pyc
+*.pyo
+.idea/
+.pydevproject
+.git/
+.vagrant/
+__pycache__
+dist
+docs
+.venv/
+logs
+Dockerfile
