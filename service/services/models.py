@@ -49,7 +49,7 @@ class Subscription(models.Model):
     service = models.ForeignKey(Service, on_delete=models.PROTECT, related_name='subscriptions')
     plan = models.ForeignKey(Plan, on_delete=models.PROTECT, related_name='subscriptions')
     price = models.PositiveIntegerField(default=0)
-    comment = models.CharField(max_length=255, blank=True, null=True, default='')
+    comment = models.CharField(max_length=255, blank=True, null=True, default='', db_index=True)
 
 
     def save(self, *args, **kwargs):
